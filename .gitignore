@@ -1,0 +1,13 @@
+.venv/
+.vscode/
+__pycache__
+config/
+session/
+logs/
+data/
+
+test*
+*.session*
+*.log
+*.db
+kernel*

@@ -1,0 +1,11 @@
+tg:
+  api_id: 123
+  api_hash: xxx
+  bot_token: xxx
+
+proxy:
+  enable: False
+  ip: 127.0.0.1
+  port: 7890
+  username: Clash
+  password: password

@@ -1,0 +1,8 @@
+﻿# pyrogram
+kurigram
+cryptography; sys_platform != 'win32'
+tgcrypto; sys_platform != 'win32'
+uvloop; sys_platform != 'win32'
+pyyaml
+
+
