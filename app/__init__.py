@@ -35,6 +35,7 @@ async def start_app():
         api_hash=setting["tg"]["api_hash"],
         proxy=proxy,
         plugins=dict(root="app.user_scripts"),
+        skip_updates=False,
     )
     bot = Client(
         "sessions/bot",
@@ -48,7 +49,7 @@ async def start_app():
     logger.info("监听主程序")
     await bot.start()
     logger.info("监听机器人")
-    re_mess1,re_mess2 = await system_version_get()
+    re_mess1, re_mess2 = await system_version_get()
     await user.send_message("me", f"Mytgbot 在 {re_mess1}上登录,\n{re_mess2}")
     await idle()
     await user.stop()
