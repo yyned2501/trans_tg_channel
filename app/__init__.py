@@ -5,6 +5,7 @@ from pyrogram import idle
 
 
 from app.libs.logs import logger
+from app.libs.sys import system_version_get
 from app.config import setting
 
 
@@ -47,6 +48,8 @@ async def start_app():
     logger.info("监听主程序")
     await bot.start()
     logger.info("监听机器人")
+    re_mess1,re_mess2 = await system_version_get()
+    await user.send_message("me", f"Mytgbot 在 {re_mess1}上登录,\n{re_mess2}")
     await idle()
     await user.stop()
     await bot.stop()
